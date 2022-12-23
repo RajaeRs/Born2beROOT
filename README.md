@@ -8,38 +8,26 @@
 
 **VM - Virtual Machines:** is a virtual environment that works like a computer within a computer. It runs on an isolated partition of its host computer with its own CPU power, memory, operating system (such as Windows, Linux, macOS), and other resources. End users can run applications on VMs and use them as they normally would on their workstation.
 
-**→** **VB - Virtual Box :**Is a *hypervisor*, Software for virtualizing x86 computing architecture (dev by Oracle). 
+**VB - Virtual Box :** Is a *hypervisor*, Software for virtualizing x86 computing architecture (dev by Oracle). 
 
-<aside>
-📌 *hypervisor:* A hypervisor is software that creates and runs **[virtual machines (VMs)](https://www.citrix.com/content/citrix/en_us/solutions/vdi-and-daas/what-is-a-virtual-machine.html/)**, which are software emulations of a computing hardware environment. Sometimes called a virtual machine monitor (VMM), the hypervisor isolates the operating system and computing resources from the virtual machines and enables the creation and management of those VMs. These virtual machines simply, code operating in a server's memory space enable administrators to have a dedicated machine for every service they need to run.
 
-</aside>
+hypervisor : A hypervisor is software that creates and runs virtual machines (VMs), which are software emulations of a computing hardware environment. Sometimes called a virtual machine monitor (VMM), the hypervisor isolates the operating system and computing resources from the virtual machines and enables the creation and management of those VMs. These virtual machines simply, code operating in a server's memory space enable administrators to have a dedicated machine for every service they need to run.
+
 
 **OS - Operating System:** is a program that manages the computer hardware. it is an intermediary that acts between the computer hardware and the user. is a system software stored in the ROM and it’s the first program load by the boot.
 
-<aside>
-📌 boot*:* Bootstrap Program : the initial program that runs when a computer is powred up or rebooted.
-→ stored in the ROM “second memory”
-→ how load the OS and start execting that system.
-→ locate and load into memory the OS kernel.
-
-</aside>
 
 **→ Debian:** also known as Debian *GNU*/Linux, is a Linux distribution composed of free and open-source software, Is a collection of software with a package management system, help to install, upgrade and remove software.
 
-<aside>
-📌 *GNU:* GNU is an extensive collection of free software, which can be used as an operating system or can be used in parts with other operating systems.
+- GNU: GNU is an extensive collection of free software, which can be used as an operating system or can be used in parts with other operating systems.
 
-</aside>
 
-**Linux: Linux is a Unix-like *kernel*.** Is an open source software, developed for the intel x86 architecture. The code used to create Linux is free and available to the public to view, edit, and—for users with the appropriate skills - to contribute to. 
+**Linux:** Linux is a Unix-like kernel. Is an open source software, developed for the intel x86 architecture. The code used to create Linux is free and available to the public to view, edit, and—for users with the appropriate skills - to contribute to. 
 
-<aside>
-📌 ***kernel**:* The kernel is responsible for managing the systems resources and allocating them to applications.
+- kernel: The kernel is responsible for managing the systems resources and allocating them to applications.
 
-</aside>
 
-![linux0.1.png](Born2beRoot%20b1ad7b208a0341a388c5c3e1f941cea4/linux0.1.png)
+![linux0 1](https://user-images.githubusercontent.com/75434277/209413193-8dd67c3d-15cb-4e92-bd55-97b6c10e9cbe.png)
 
 ## Hard disk Partitions
 
@@ -53,7 +41,7 @@
     <aside>
     📌 LVM - Logical Volume Management: **Uses a different concept. Storage space is managed by combining or pooling the capacity of the available drives.
     
-    ![lvm.png](Born2beRoot%20b1ad7b208a0341a388c5c3e1f941cea4/lvm.png)
+    ![lvm](https://user-images.githubusercontent.com/75434277/209413456-39a0a5bc-f877-45c4-b935-e4e4bd904da6.png)
     
     </aside>
     
@@ -86,13 +74,12 @@ vgs  #Display information about logical volumes
 
 Low-level package manager  ****is a free software interface that works with core libraries to handle the installation and removal of software on Debian.
 
+![Apt-get_install_mediawiki](https://user-images.githubusercontent.com/75434277/209413369-5c555a19-caef-4eb7-b1a7-8a7d96db027e.png)
 **APT & Aptitude:**
 
 **Aptitude:** A High-level package manager for Debian. It displays a list of software packages and allows the user to interactively pick packages to install or remove.
 
-![Apt-get_install_mediawiki.png](Born2beRoot%20b1ad7b208a0341a388c5c3e1f941cea4/Apt-get_install_mediawiki.png)
-
-![Aptitude.png](Born2beRoot%20b1ad7b208a0341a388c5c3e1f941cea4/Aptitude.png)
+![Aptitude](https://user-images.githubusercontent.com/75434277/209413402-f3ca62ac-e3d9-4a76-9a1c-fb74dd0401a1.png)
 
 **Sudo - Super User DO:**
 
@@ -107,8 +94,8 @@ Low-level package manager  ****is a free software interface that works with core
     add username sudo
     visudo *#to change the configuration of sudo*
     
-    sudo -l #*****************check sudo access*****************
-    dpkg -l sudo #******************************check if the sudo is installed******************************
+    sudo -l #check sudo access
+    dpkg -l sudo #check if the sudo is installed
     ```
     
     Sudo configuration:
@@ -132,12 +119,12 @@ Low-level package manager  ****is a free software interface that works with core
     Sudo - Command:
     
     ```bash
-    sudo adduser <username> #***********************add an user to the usre group***********************
-    sudo groupadd <groupname> #******************************add an group****************************** 
+    sudo adduser <username> #add an user to the usre group
+    sudo groupadd <groupname> #add an group
     sudo usermod -aG <groupname> <username>
-    sudo id <username> #***************************check the groups of this user***************************
-    sudo deluser <username> *#Delete the user*
-    sudo groupdel <groupname> *#Delete the group*
+    sudo id <username> #check the groups of this user
+    sudo deluser <username> #Delete the user
+    sudo groupdel <groupname> #Delete the group
     getent group | grep <groupname to be found>
     cd /var/log/sudo/00/00 #check all command input output
     ```
@@ -179,7 +166,7 @@ service sshd status *#check status*
 **Password Policy:**
 
 ```bash
-**#CHANGE THE PASSWORD TIME EXPIRATION**
+#CHANGE THE PASSWORD TIME EXPIRATION
 nano /etc/login.defs 	*#The /etc/login.defs file defines the site-specific 
 												#configuration for the shadow password suite.*
 
@@ -187,17 +174,15 @@ nano /etc/login.defs 	*#The /etc/login.defs file defines the site-specific
 		| PASS_MIN_DAYS    2
 		| PASS_WARN_AGE    7
 
-**#SET UP THE PASSWORD POLICY**
-apt install libpam-pwquality -y ***# librery purpose is to provide common functions
-																		#for password quality checking***
+#SET UP THE PASSWORD POLICY
+apt install libpam-pwquality -y # librery purpose is to provide common functions
+																		#for password quality checking
 nano /etc/pam.d/common-password
 		| retry=3 ucredit=-1 lcredit=-1 dcredit=-1 maxrepeat=3 difok=7 minlen=10 
-		| usercheck=1 *#by default is equal to 1 so it's not important*
+		| usercheck=1 #by default is equal to 1 so it's not important
 		| enforce_for_root
 
-chage -W 7 -m 2 -M username ***#chage : change the number of days between password** 
-															 **#changes and the date of the last change.***
-															 #-W:warndays / -m:mindays / -M:maxdays
+chage -W 7 -m 2 -M username #chage : change the number of days between password changes and the date of the last change. -W:warndays / -m:mindays / -M:maxdays
 ```
 
 **UFW - Uncomplicated FireWall:** 
