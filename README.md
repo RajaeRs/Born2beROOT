@@ -26,8 +26,10 @@ hypervisor : A hypervisor is software that creates and runs virtual machines (
 
 - kernel: The kernel is responsible for managing the systems resources and allocating them to applications.
 
+![kernel (1)](https://github.com/RajaeRs/Born2beROOT/assets/75434277/2cc2f0af-504e-47ad-b50b-0d3f6edf7c57)
 
-![linux0 1](https://user-images.githubusercontent.com/75434277/209413193-8dd67c3d-15cb-4e92-bd55-97b6c10e9cbe.png)
+
+
 
 ## Hard disk Partitions
 
@@ -41,7 +43,9 @@ hypervisor : A hypervisor is software that creates and runs virtual machines (
     <aside>
     📌 LVM - Logical Volume Management: **Uses a different concept. Storage space is managed by combining or pooling the capacity of the available drives.
     
-    ![lvm](https://user-images.githubusercontent.com/75434277/209413456-39a0a5bc-f877-45c4-b935-e4e4bd904da6.png)
+    ![lvm (2)](https://github.com/RajaeRs/Born2beROOT/assets/75434277/6c1ea948-c078-433f-9085-e7170b1805de)
+
+
     
     </aside>
     
